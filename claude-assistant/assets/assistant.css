@@ -1,0 +1,106 @@
+/* Place at: /wp-content/plugins/claude-assistant/assets/assistant.css */
+
+#claude-va-root { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+
+#cva-wrap {
+  display: flex; flex-direction: column;
+  height: calc(100vh - 80px); max-width: 1100px;
+  background: #fff; border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,.08);
+  overflow: hidden; margin: 16px;
+}
+
+/* Header */
+#cva-header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 20px; background: #1a1a2e;
+  color: #fff; flex-shrink: 0;
+}
+#cva-logo { font-weight: 700; font-size: 16px; }
+#cva-site  { font-size: 13px; color: #aaa; flex: 1; }
+#cva-clear {
+  background: rgba(255,255,255,.1); border: none; color: #fff;
+  padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 13px;
+}
+#cva-clear:hover { background: rgba(255,255,255,.2); }
+
+/* Suggestion chips */
+#cva-suggestions {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  padding: 12px 16px; background: #f9f9fb; border-bottom: 1px solid #eee; flex-shrink: 0;
+}
+.cva-chip {
+  background: #fff; border: 1px solid #ddd; border-radius: 20px;
+  padding: 5px 14px; font-size: 13px; cursor: pointer; transition: all .2s;
+}
+.cva-chip:hover { background: #6d28d9; color: #fff; border-color: #6d28d9; }
+
+/* Messages */
+#cva-messages {
+  flex: 1; overflow-y: auto; padding: 20px 16px;
+  display: flex; flex-direction: column; gap: 14px;
+  background: #f5f5fa;
+}
+
+.cva-msg { display: flex; max-width: 90%; }
+.cva-user { align-self: flex-end; flex-direction: row-reverse; }
+.cva-assistant, .cva-tool { align-self: flex-start; }
+
+.cva-bubble {
+  padding: 10px 14px; border-radius: 12px;
+  font-size: 14px; line-height: 1.6; max-width: 100%;
+}
+.cva-user .cva-bubble    { background: #6d28d9; color: #fff; border-bottom-right-radius: 3px; }
+.cva-assistant .cva-bubble { background: #fff; border: 1px solid #e5e5e5; border-bottom-left-radius: 3px; }
+.cva-tool .cva-bubble    { background: #f0fdf4; border: 1px solid #bbf7d0; border-bottom-left-radius: 3px; width: 100%; }
+
+.cva-bubble strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; opacity: .7; }
+.cva-user .cva-bubble strong { opacity: .8; }
+
+/* Tool result table */
+.cva-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+.cva-table th { background: #d1fae5; padding: 6px 10px; text-align: left; border-bottom: 2px solid #6ee7b7; }
+.cva-table td { padding: 5px 10px; border-bottom: 1px solid #e5e7eb; }
+.cva-table tr:last-child td { border: none; }
+.cva-table tr:hover td { background: #f0fdf4; }
+
+/* Error */
+.cva-err { color: #dc2626; font-size: 13px; }
+
+/* Input bar */
+#cva-inputbar {
+  display: flex; gap: 10px; padding: 12px 16px;
+  background: #fff; border-top: 1px solid #eee; flex-shrink: 0;
+}
+#cva-input {
+  flex: 1; border: 1px solid #ddd; border-radius: 8px;
+  padding: 10px 14px; font-size: 14px; resize: none;
+  font-family: inherit; outline: none; transition: border .2s;
+}
+#cva-input:focus { border-color: #6d28d9; }
+#cva-send {
+  background: #6d28d9; color: #fff; border: none;
+  padding: 10px 22px; border-radius: 8px; font-size: 14px;
+  font-weight: 600; cursor: pointer; align-self: flex-end; transition: background .2s;
+}
+#cva-send:hover    { background: #5b21b6; }
+#cva-send:disabled { background: #c4b5fd; cursor: not-allowed; }
+
+/* Warning bar */
+#cva-warning {
+  background: #fef3c7; border-top: 1px solid #fde68a;
+  padding: 8px 16px; font-size: 13px; text-align: center;
+}
+
+/* Loading dots */
+.cva-dots span {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+  background: #6d28d9; margin: 0 2px;
+  animation: cva-bounce 1.2s infinite ease-in-out;
+}
+.cva-dots span:nth-child(2) { animation-delay: .2s; }
+.cva-dots span:nth-child(3) { animation-delay: .4s; }
+@keyframes cva-bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40%           { transform: scale(1); }
+}
