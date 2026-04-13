@@ -1,0 +1,434 @@
+<div class="zss-docs">
+    <section class="zss-docs-hero">
+        <div class="zss-docs-hero-text">
+            <h2 class="zss-docs-title">ZShield Sentinel Documentation</h2>
+            <p class="zss-docs-subtitle">A clean, step-by-step guide to help you harden your WordPress site, run scans, and read security reports with confidence.</p>
+            <div class="zss-docs-cta">
+                <a class="button button-primary" href="{{settings_url}}">Configure Settings</a>
+                <a class="button" href="{{integrity_url}}">File Integrity</a>
+                <a class="button" href="{{malware_url}}">Malware Scan</a>
+            </div>
+        </div>
+        <div class="zss-docs-hero-card">
+            <h3>Quick Start (5 Minutes)</h3>
+            <ol class="zss-docs-steps">
+                <li>Open <strong>Settings</strong> and review the recommended defaults.</li>
+                <li>Enable <strong>Login Hardening</strong> + <strong>2FA</strong> for stronger access control.</li>
+                <li>Create the <strong>File Integrity Baseline</strong> once your site is clean.</li>
+                <li>Run a <strong>Manual Scan</strong> to confirm everything matches.</li>
+                <li>Enable <strong>Scheduled Scans</strong> for ongoing monitoring.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="zss-docs-section">
+        <h3>Training Guide (Step-by-Step)</h3>
+        <div class="zss-docs-grid-two">
+            <div class="zss-docs-card">
+                <h4>1. Install and Activate</h4>
+                <ol class="zss-docs-steps">
+                    <li>Go to <strong>WP Admin &gt; Plugins &gt; Add New</strong>.</li>
+                    <li>Upload the <strong>ZShield Sentinel</strong> plugin ZIP.</li>
+                    <li>Click <strong>Install Now</strong> and then <strong>Activate</strong>.</li>
+                </ol>
+            </div>
+            <div class="zss-docs-card">
+                <h4>2. Open the Dashboard</h4>
+                <ol class="zss-docs-steps">
+                    <li>Go to <strong>WP Admin &gt; ZShield &gt; Dashboard</strong>.</li>
+                    <li>Review the <strong>Security Score</strong> and <strong>Protection Status</strong>.</li>
+                    <li>Use quick actions to jump to key pages.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section class="zss-docs-section">
+        <div class="zss-docs-grid-two">
+            <div class="zss-docs-card">
+                <h4>3. Configure Security Settings</h4>
+                <ol class="zss-docs-steps">
+                    <li>Open <strong>Settings</strong>.</li>
+                    <li>Enable <strong>Login Guard</strong> and set attempts + lockout time.</li>
+                    <li>Enable <strong>2FA</strong> + <strong>Login Captcha</strong> if you want stronger authentication.</li>
+                    <li>Configure <strong>Login Hardening</strong> with access key or custom login slug.</li>
+                    <li>Enable <strong>Firewall</strong> to block common exploit patterns.</li>
+                    <li>Enable <strong>Security Headers</strong>, <strong>XML-RPC Disable</strong>, and <strong>Pingbacks Disable</strong>.</li>
+                    <li>Enable <strong>Block Author Enumeration</strong>.</li>
+                    <li>Disable the <strong>File Editor</strong> and hide WP version.</li>
+                    <li>Click <strong>Save Changes</strong>.</li>
+                </ol>
+            </div>
+            <div class="zss-docs-card">
+                <h4>4. Create File Integrity Baseline</h4>
+                <ol class="zss-docs-steps">
+                    <li>Make sure the site is clean and updated.</li>
+                    <li>Go to <strong>File Integrity</strong>.</li>
+                    <li>Click <strong>Create Baseline</strong>.</li>
+                </ol>
+                <p class="zss-docs-note">Only recreate baseline after trusted updates.</p>
+                <p class="zss-docs-note">Optional: Enable <strong>Core File Integrity</strong> if you also want to monitor WordPress core files.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="zss-docs-section">
+        <div class="zss-docs-grid-two">
+            <div class="zss-docs-card">
+                <h4>5. Run Manual Scans</h4>
+                <ol class="zss-docs-steps">
+                    <li>Go to <strong>File Integrity</strong>.</li>
+                    <li>Click <strong>Run Scan</strong>.</li>
+                    <li>Open <strong>Diff Preview</strong> for modified files.</li>
+                </ol>
+            </div>
+            <div class="zss-docs-card">
+                <h4>6. Malware Scan</h4>
+                <ol class="zss-docs-steps">
+                    <li>Go to <strong>Malware Scan</strong>.</li>
+                    <li>Click <strong>Run Malware Scan</strong>.</li>
+                    <li>Filter by severity and review findings.</li>
+                    <li>Use <strong>Quarantine</strong> to isolate suspicious files.</li>
+                </ol>
+                <p class="zss-docs-note">Always confirm false positives before action. Enable scheduled malware scans if you want automatic checks.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="zss-docs-section">
+        <div class="zss-docs-grid-two">
+            <div class="zss-docs-card">
+                <h4>7. Audit Log Review</h4>
+                <ol class="zss-docs-steps">
+                    <li>Go to <strong>Audit Log</strong>.</li>
+                    <li>Check recent events (failed logins, lockouts, scans).</li>
+                    <li>Use <strong>Export CSV</strong> if you need offline reports.</li>
+                    <li>Investigate unusual activity quickly.</li>
+                </ol>
+            </div>
+            <div class="zss-docs-card">
+                <h4>8. Configure Email Alerts</h4>
+                <ol class="zss-docs-steps">
+                    <li>Enable <strong>Email Alerts</strong> for lockouts.</li>
+                    <li>Set the <strong>Alert Email</strong>.</li>
+                    <li>Enable <strong>Scan Email Reports</strong> if required.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="zss-docs-section">
+        <div class="zss-docs-split">
+            <div>
+                <h3>Step-by-Step Workflow</h3>
+                <ol class="zss-docs-steps">
+                    <li>Install and activate the plugin.</li>
+                    <li>Review security settings and save changes.</li>
+                    <li>Create a baseline when everything is clean.</li>
+                    <li>Run manual scans after updates or changes.</li>
+                    <li>Check the audit log weekly for unusual activity.</li>
+                </ol>
+            </div>
+            <div class="zss-docs-highlight">
+                <h4>When to Recreate Baseline</h4>
+                <p>Recreate baseline only after you intentionally update themes or plugins and have verified the site is clean. This keeps diffs accurate.</p>
+                <p class="zss-docs-note">Tip: Keep a backup before baseline creation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="zss-docs-section">
+        <div class="zss-docs-grid-two">
+            <div class="zss-docs-card">
+                <h4>Login Protection (2FA + Captcha)</h4>
+                <ol class="zss-docs-steps">
+                    <li>Enable <strong>Two-Factor Authentication</strong> in Settings.</li>
+                    <li>Each user can enable 2FA in their profile and add the secret to an authenticator app.</li>
+                    <li>Enable <strong>Login Captcha</strong> (math or reCAPTCHA) to block bots.</li>
+                </ol>
+            </div>
+            <div class="zss-docs-card">
+                <h4>Login URL Hardening</h4>
+                <ol class="zss-docs-steps">
+                    <li>Enable <strong>Login URL Hardening</strong> in Settings.</li>
+                    <li>Set a <strong>Custom Login Slug</strong> or a <strong>Login Access Key</strong>.</li>
+                    <li>Use the new login URL for all users.</li>
+                </ol>
+                <p class="zss-docs-note">Tip: Save the new URL in a password manager.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="zss-docs-section">
+        <div class="zss-docs-grid-two">
+            <div class="zss-docs-card">
+                <h4>Firewall Rules</h4>
+                <ol class="zss-docs-steps">
+                    <li>Enable the <strong>Application Firewall</strong>.</li>
+                    <li>Add allowlist or blocklist IPs if needed.</li>
+                    <li>Exclude safe paths to reduce false positives.</li>
+                </ol>
+            </div>
+            <div class="zss-docs-card">
+                <h4>Role-Based Access</h4>
+                <ol class="zss-docs-steps">
+                    <li>Set <strong>Minimum Access Role</strong> in Settings.</li>
+                    <li>Only users with that role (or higher) can access ZShield pages.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section class="zss-docs-section">
+        <div class="zss-docs-grid-two">
+            <div class="zss-docs-card">
+                <h4>Settings Import/Export</h4>
+                <ol class="zss-docs-steps">
+                    <li>Go to <strong>Settings</strong>.</li>
+                    <li>Use <strong>Export Settings (JSON)</strong> to save a backup.</li>
+                    <li>Use <strong>Import Settings</strong> to apply a saved configuration.</li>
+                </ol>
+            </div>
+            <div class="zss-docs-card">
+                <h4>Malware Quarantine</h4>
+                <ol class="zss-docs-steps">
+                    <li>Review a finding in <strong>Malware Scan</strong>.</li>
+                    <li>Click <strong>Quarantine</strong> to isolate the file.</li>
+                    <li>Restore it later if confirmed safe.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="zss-docs-section">
+        <div class="zss-docs-split">
+            <div>
+                <h3>How to Install the Plugin</h3>
+                <ol class="zss-docs-steps">
+                    <li>Download the <strong>ZShield Sentinel</strong> plugin ZIP.</li>
+                    <li>Go to <strong>WP Admin &gt; Plugins &gt; Add New</strong>.</li>
+                    <li>Click <strong>Upload Plugin</strong> and choose the ZIP file.</li>
+                    <li>Click <strong>Install Now</strong>.</li>
+                    <li>Click <strong>Activate</strong> after installation completes.</li>
+                </ol>
+            </div>
+            <div class="zss-docs-highlight">
+                <h4>Alternative (FTP Upload)</h4>
+                <ol class="zss-docs-steps">
+                    <li>Extract the ZIP file.</li>
+                    <li>Upload the folder to <strong>wp-content/plugins/</strong>.</li>
+                    <li>Go to <strong>Plugins</strong> and click <strong>Activate</strong>.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section class="zss-docs-section">
+        <h3>Understanding Reports</h3>
+        <div class="zss-docs-table-wrap">
+            <table class="widefat striped zss-docs-table">
+                <thead>
+                    <tr>
+                        <th>Report Type</th>
+                        <th>What It Means</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Added File</td>
+                        <td>A new file appeared that was not in baseline.</td>
+                        <td>Verify if it came from an update or a plugin install.</td>
+                    </tr>
+                    <tr>
+                        <td>Modified File</td>
+                        <td>A file changed since baseline.</td>
+                        <td>Use diff preview to inspect changes.</td>
+                    </tr>
+                    <tr>
+                        <td>Removed File</td>
+                        <td>A file was deleted after baseline.</td>
+                        <td>Confirm if removal was expected.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="zss-docs-section">
+        <div class="zss-docs-split">
+            <div>
+                <h3>Email Alerts</h3>
+                <p>Enable alerts to get notified when lockouts or scans occur. This helps you respond quickly.</p>
+                <ul>
+                    <li>Set <strong>Alert Email</strong> for login lockouts.</li>
+                    <li>Enable <strong>Scan Email Reports</strong> for scheduled scans.</li>
+                    <li>Enable <strong>Malware Email Reports</strong> for scheduled malware scans.</li>
+                    <li>Use a monitored inbox for fastest response time.</li>
+                </ul>
+            </div>
+            <div class="zss-docs-highlight">
+                <h4>Best Practices Checklist</h4>
+                <ul>
+                    <li>Keep WordPress core, themes, and plugins updated.</li>
+                    <li>Use strong passwords and two-factor authentication.</li>
+                    <li>Limit admin accounts to trusted users only.</li>
+                    <li>Review audit logs after major changes.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="zss-docs-section">
+        <div class="zss-docs-split">
+            <div>
+                <h3>Malware Scan Controls</h3>
+                <p>Fine-tune what the scanner checks to reduce noise without losing protection.</p>
+                <ul>
+                    <li>Enable <strong>Ignore Vendor JS</strong> to skip minified bundles.</li>
+                    <li>Add <strong>Rule Allowlist</strong> to ignore known safe detections.</li>
+                    <li>Add <strong>Path Allowlist</strong> for trusted directories.</li>
+                    <li>Include <strong>Uploads</strong> and <strong>MU-Plugins</strong> for wider coverage.</li>
+                    <li>Use <strong>Quarantine</strong> to safely isolate suspicious files.</li>
+                </ul>
+            </div>
+            <div class="zss-docs-highlight">
+                <h4>Uninstall Cleanup</h4>
+                <p>Turn on <strong>Remove Data on Uninstall</strong> if you want all logs and settings deleted when the plugin is removed.</p>
+                <p class="zss-docs-note">Tip: Keep it off if you want to preserve audit history.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="zss-docs-section">
+        <h3>Troubleshooting</h3>
+        <div class="zss-docs-grid-two">
+            <div class="zss-docs-card">
+                <h4>Too Many Scan Changes</h4>
+                <p>If scans report many changes, confirm recent updates. Recreate baseline only after verifying changes are safe.</p>
+            </div>
+            <div class="zss-docs-card">
+                <h4>Emails Not Received</h4>
+                <p>Check your SMTP or email provider settings. Test by sending a WordPress email.</p>
+            </div>
+            <div class="zss-docs-card">
+                <h4>Lockouts Triggered</h4>
+                <p>Whitelist your IP if needed and review failed login attempts in the audit log.</p>
+            </div>
+            <div class="zss-docs-card">
+                <h4>Diff Preview Not Available</h4>
+                <p>Diffs are available only for files stored in baseline. Recreate baseline to enable new diffs.</p>
+            </div>
+            <div class="zss-docs-card">
+                <h4>Cannot Access Login Page</h4>
+                <p>If Login URL Hardening is enabled, use the custom slug or access key. Disable the setting if you lost access.</p>
+            </div>
+            <div class="zss-docs-card">
+                <h4>Captcha Failures</h4>
+                <p>For reCAPTCHA, verify your site/secret keys. For math captcha, refresh the login page to get a new challenge.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="zss-docs-section">
+        <h3>FAQ</h3>
+        <div class="zss-docs-faq">
+            <div class="zss-docs-faq-item">
+                <h4>Does this plugin replace a firewall?</h4>
+                <p>It includes an application firewall for common patterns, but a dedicated WAF can provide extra protection.</p>
+            </div>
+            <div class="zss-docs-faq-item">
+                <h4>How often should I run a scan?</h4>
+                <p>Weekly is enough for stable sites. Run a manual scan after updates.</p>
+            </div>
+            <div class="zss-docs-faq-item">
+                <h4>Can I export audit logs?</h4>
+                <p>Yes. Use the <strong>Export CSV</strong> button on the Audit Log page.</p>
+            </div>
+            <div class="zss-docs-faq-item">
+                <h4>How does 2FA work?</h4>
+                <p>Enable 2FA globally, then each user can activate it in their profile using any TOTP authenticator app.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="zss-docs-section">
+        <div class="zss-docs-split">
+            <div>
+                <h3>Weekly Operating Checklist</h3>
+                <ol class="zss-docs-steps">
+                    <li>Review the Dashboard score and status.</li>
+                    <li>Check Audit Log for suspicious activity.</li>
+                    <li>Run Malware Scan.</li>
+                    <li>Run File Integrity Scan after any update.</li>
+                </ol>
+            </div>
+            <div class="zss-docs-highlight">
+                <h4>Best Practices</h4>
+                <ul>
+                    <li>Keep WordPress core, themes, and plugins updated.</li>
+                    <li>Use strong passwords and 2FA.</li>
+                    <li>Limit admin accounts to trusted users only.</li>
+                    <li>Backup before major changes.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="zss-docs-grid">
+        <div class="zss-docs-card">
+            <h3>What This Plugin Does</h3>
+            <ul>
+                <li>Protects login with throttling and lockouts.</li>
+                <li>Adds 2FA (TOTP) and captcha to harden login.</li>
+                <li>Provides login URL hardening with custom slug or access key.</li>
+                <li>Blocks author enumeration attempts to reduce user discovery.</li>
+                <li>Adds security headers and disables risky features.</li>
+                <li>Disables XML-RPC and pingbacks to shrink attack surface.</li>
+                <li>Hides WordPress version and disables the file editor.</li>
+                <li>Applies firewall rules to block common exploit patterns.</li>
+                <li>Tracks sensitive changes in the audit log.</li>
+                <li>Creates a baseline of trusted files and checks for tampering.</li>
+                <li>Optionally includes WordPress core files in integrity scans.</li>
+                <li>Runs malware scans to detect suspicious code patterns.</li>
+                <li>Quarantines suspicious files with restore support.</li>
+                <li>Exports/imports settings for quick setup.</li>
+                <li>Enforces role-based access to plugin controls.</li>
+                <li>Provides a security score to summarize posture.</li>
+            </ul>
+        </div>
+        <div class="zss-docs-card">
+            <h3>Recommended Settings</h3>
+            <ul>
+                <li>Enable <strong>Login Guard</strong> with 5 attempts and 15 minutes lockout.</li>
+                <li>Enable <strong>2FA</strong> for admin users.</li>
+                <li>Enable <strong>Login Captcha</strong> to reduce bot traffic.</li>
+                <li>Use <strong>Login URL Hardening</strong> with a custom slug.</li>
+                <li>Disable <strong>XML-RPC</strong> and <strong>Pingbacks</strong>.</li>
+                <li>Enable <strong>Block Author Enumeration</strong> to hide usernames.</li>
+                <li>Enable <strong>Security Headers</strong> for safer responses.</li>
+                <li>Disable the <strong>File Editor</strong> in admin.</li>
+                <li>Hide the <strong>WordPress Version</strong> in page source.</li>
+                <li>Turn on <strong>Audit Log</strong> to track admin activity.</li>
+                <li>Enable <strong>Firewall</strong> if you want active request blocking.</li>
+                <li>Use <strong>Scheduled Scans</strong> weekly for stable sites.</li>
+                <li>Enable <strong>Scheduled Malware Scans</strong> with email reports.</li>
+            </ul>
+        </div>
+        <div class="zss-docs-card">
+            <h3>Essential Pages</h3>
+            <p>Jump directly to important pages:</p>
+            <div class="zss-docs-links">
+                <a class="button" href="{{dashboard_url}}">Dashboard</a>
+                <a class="button" href="{{settings_url}}">Settings</a>
+                <a class="button" href="{{audit_url}}">Audit Log</a>
+                <a class="button" href="{{integrity_url}}">File Integrity</a>
+                <a class="button" href="{{malware_url}}">Malware Scan</a>
+            </div>
+        </div>
+    </section>
+</div>
