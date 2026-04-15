@@ -1,0 +1,30 @@
+CodeCanyon Screenshot Guidelines
+
+Use 5 high-quality images for CodeCanyon preview and documentation.
+
+Screenshot 1: Admin Dashboard Overview
+- Show the AI Ultimate Website Booster menu and the main dashboard tabs.
+- Include the modern tab navigation and summary cards.
+
+Screenshot 2: AI Content Generation
+- Show the AI Content tab with topic input, tone selector, and generated result area.
+- Display a sample AI response text block.
+
+Screenshot 3: Popup Templates Panel
+- Show the popup settings tab with template selection and CTA text fields.
+- Highlight premium template names and device targeting options.
+
+Screenshot 4: API Integration Settings
+- Show the settings tab with API provider, API key, model, and endpoint fields.
+- Include branding for Swastik Infotech.
+
+Screenshot 5: Frontend Popup Preview
+- Show the live popup overlay on a sample homepage layout.
+- Use one of the premium popup styles with a strong CTA button.
+
+File names:
+- screenshot-1-admin-dashboard.png
+- screenshot-2-ai-content.png
+- screenshot-3-popup-templates.png
+- screenshot-4-api-settings.png
+- screenshot-5-frontend-popup.png

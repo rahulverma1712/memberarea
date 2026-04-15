@@ -1,0 +1,20 @@
+AI Ultimate Website Booster - Installation Guide
+
+1. Upload Folder
+   - Upload the `ai-ultimate-website-booster` folder to `/wp-content/plugins/`.
+
+2. Activate Plugin
+   - Go to WordPress Admin > Plugins.
+   - Activate "AI Ultimate Website Booster".
+
+3. Configure Settings
+   - Go to WordPress Admin > AI Booster.
+   - Enter your OpenAI API key in the Settings tab.
+   - Choose your AI model and confirm the API endpoint.
+   - Choose the desired popup behavior, delay, and device targeting.
+
+4. Use Features
+   - AI Content: Submit a topic and tone to generate real AI-powered content.
+   - SEO Schema: Schema is added automatically for single posts.
+   - Popups: Manage exit intent, scroll, and timed popups from the Settings tab.
+   - Health Checker: Review site health suggestions and inactive plugin notifications.

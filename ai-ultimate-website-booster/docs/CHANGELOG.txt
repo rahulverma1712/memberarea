@@ -1,0 +1,8 @@
+AI Ultimate Website Booster Changelog
+
+Version 1.0.0
+- Initial release with AI Content Generator, SEO Schema support, premium popup templates, website health dashboard, and content updater.
+- Added real OpenAI API integration with customizable endpoint and model.
+- Added premium popup templates for Conversion Focus, Lead Magnet, and Premium Offer.
+- Included popup text customization, CTA button settings, and device targeting.
+- Added admin dashboard, secure AJAX/REST endpoints, and professional documentation for CodeCanyon publishing.

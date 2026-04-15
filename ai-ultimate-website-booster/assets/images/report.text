@@ -1,0 +1,476 @@
+
+Important Notice — Limitations of Automated Scanning
+Automated scanning cannot guarantee complete coverage — some issues may be missed (false negatives) and some findings may be false positives that require manual verification.
+Always follow up with manual review and professional penetration testing for critical, production, or customer-facing applications before drawing security conclusions.
+This report is a point-in-time snapshot. Vulnerabilities and configurations change — schedule regular scans and keep dependencies up to date.
+Findings should be reviewed by a qualified professional before making remediation decisions. Severity ratings are indicative, not absolute.
+Scans are performed from our servers over the public internet. Results reflect what is observable externally and do not simulate an authenticated or insider threat.
+No exploitation attempts are made. This scanner performs passive checks only — it does not modify data, inject payloads into live systems, or bypass authentication.
+Code Scan — Checks Performed in This Scan
+OWASP Top 10
+OWASP DepCheck
+NIST SP 800
+Static Code Analysis
+Pattern-based scanning of PHP, JS/TS, HTML, Java, Python, Dart/Flutter, Swift. Detects eval(), exec(), SQL concatenation, weak crypto, path traversal sinks, command injection.
+OWASP Top 10 A03:2021
+CWE/SANS Top 25
+Hardcoded Secrets & Config
+Scans .env, .ini, .yaml, .conf files for leaked API keys, DB passwords, tokens, and insecure settings (debug=true, allow_url_fopen, etc.).
+OWASP Top 10 A02:2021
+CWE-798
+OWASP Dependency Check (composer.lock · package-lock.json from ZIP)
+All PHP and npm packages declared in the uploaded project's lock files were checked for known CVEs. Source: Sonatype OSS Index (primary) with automatic fallback to OSV.dev (Google — aggregates GHSA, NVD, and 20+ feeds).
+OWASP Top 10 A06:2021
+OSV.dev (Google)
+NVD / GHSA
+All code checks are
+static analysis only
+— no code is executed. Dependency CVEs fetched live from Sonatype OSS Index / OSV.dev at scan time.
+Code Scan Report #43
+
+Project:
+booster plugin
+Scanned:
+14 Apr 2026, 10:31
+Duration:
+3s
+Total Findings:
+37
+F
+0/100
+0
+ Critical
+22
+ High
+10
+ Medium
+5
+ Low
+0
+ Info
+Findings (ordered by severity)
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-health-result').html(html).addClass('aiwb-health-result');
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:64
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-security-summary').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:253
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-ideas-result').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:662
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-links-result').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1084
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-db-result').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1099
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-health-result').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1125
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-health-result').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1139
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-health-result').html(buildSecurityReport(data));
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1293
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-health-result').html(buildSecurityReport(data));
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1314
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-alt-result').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1360
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-posts-list').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1387
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-integrity-result').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1518
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-posts-list').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1567
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-updater-table').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1583
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-updater-table').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1597
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-compare-original').html(diff.original);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1618
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-compare-updated').html(diff.updated);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1619
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-version-list').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1626
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-compare-original').html(diff.original);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1639
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-compare-updated').html(diff.updated);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1640
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-popup-preview').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1888
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+High
+jQuery .html() With Dynamic Content — XSS Risk
+jQuery .html() is used with a dynamic (non-literal) argument. If the value contains user-controlled data, this directly injects unescaped HTML into the DOM — a classic XSS vector.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+$('#aiwb-image-grid').html(html);
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:2150
+Remediation
+Use .text() for plain text output. If HTML is required, sanitize the value with DOMPurify before passing to .html(). Example: $(el).html(DOMPurify.sanitize(content)).
+Medium
+Missing CSRF Token in POST Form
+A POST form was found without a visible CSRF token hidden field, which may allow Cross-Site Request Forgery attacks.
+File Location
+ai-ultimate-website-booster/admin/dashboard.php
+Vulnerable Line
+<form id="aiwb-content-form" method="post
+Evidence
+ai-ultimate-website-booster/admin/dashboard.php:294
+Remediation
+Add a CSRF token hidden field to all POST forms and validate it server-side on submission.
+Medium
+Missing CSRF Token in POST Form
+A POST form was found without a visible CSRF token hidden field, which may allow Cross-Site Request Forgery attacks.
+File Location
+ai-ultimate-website-booster/admin/dashboard.php
+Vulnerable Line
+<form method="post
+Evidence
+ai-ultimate-website-booster/admin/dashboard.php:697
+Remediation
+Add a CSRF token hidden field to all POST forms and validate it server-side on submission.
+Medium
+XSS Risk — Dynamic innerHTML Assignment
+Setting innerHTML with a dynamic value can enable XSS if the value contains attacker-controlled content.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+container.innerHTML = html;
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:200
+Remediation
+Use textContent for plain text. If HTML is needed, sanitize with DOMPurify before assigning.
+Medium
+Client-Side Open Redirect Risk — Dynamic location Assignment
+window.location or location.href is assigned a dynamic value (not a hardcoded string). If this value is derived from URL parameters or user input, attackers can redirect users to malicious sites.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+window.location.href = baseUrl + '?page=aiwb-ai-content';
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:521
+Remediation
+Validate redirect destinations against an allowlist. Use relative paths for internal redirects. Never redirect to a URL derived from untrusted input.
+Medium
+Client-Side Open Redirect Risk — Dynamic location Assignment
+window.location or location.href is assigned a dynamic value (not a hardcoded string). If this value is derived from URL parameters or user input, attackers can redirect users to malicious sites.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+window.location.href = baseUrl + '?page=aiwb-health-scanner';
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:526
+Remediation
+Validate redirect destinations against an allowlist. Use relative paths for internal redirects. Never redirect to a URL derived from untrusted input.
+Medium
+Client-Side Open Redirect Risk — Dynamic location Assignment
+window.location or location.href is assigned a dynamic value (not a hardcoded string). If this value is derived from URL parameters or user input, attackers can redirect users to malicious sites.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+window.location.href = baseUrl + '?page=aiwb-dashboard&tab=dashboard';
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:612
+Remediation
+Validate redirect destinations against an allowlist. Use relative paths for internal redirects. Never redirect to a URL derived from untrusted input.
+Medium
+Client-Side Open Redirect Risk — Dynamic location Assignment
+window.location or location.href is assigned a dynamic value (not a hardcoded string). If this value is derived from URL parameters or user input, attackers can redirect users to malicious sites.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+window.location.href = baseUrl + '?page=aiwb-ai-content&idea=' + ideaParam;
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:690
+Remediation
+Validate redirect destinations against an allowlist. Use relative paths for internal redirects. Never redirect to a URL derived from untrusted input.
+Medium
+Client-Side Open Redirect Risk — Dynamic location Assignment
+window.location or location.href is assigned a dynamic value (not a hardcoded string). If this value is derived from URL parameters or user input, attackers can redirect users to malicious sites.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+window.location.href = url;
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1329
+Remediation
+Validate redirect destinations against an allowlist. Use relative paths for internal redirects. Never redirect to a URL derived from untrusted input.
+Medium
+Client-Side Open Redirect Risk — Dynamic location Assignment
+window.location or location.href is assigned a dynamic value (not a hardcoded string). If this value is derived from URL parameters or user input, attackers can redirect users to malicious sites.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+window.location.href = url;
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1418
+Remediation
+Validate redirect destinations against an allowlist. Use relative paths for internal redirects. Never redirect to a URL derived from untrusted input.
+Medium
+Client-Side Open Redirect Risk — Dynamic location Assignment
+window.location or location.href is assigned a dynamic value (not a hardcoded string). If this value is derived from URL parameters or user input, attackers can redirect users to malicious sites.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+window.location.href = url;
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1529
+Remediation
+Validate redirect destinations against an allowlist. Use relative paths for internal redirects. Never redirect to a URL derived from untrusted input.
+Low
+window.open() Without noopener — Reverse Tabnabbing Risk
+window.open() is called without passing rel="noopener noreferrer". The opened page gains a reference to the opener window via window.opener, allowing it to redirect the original page to a phishing URL.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+window.open(url, '_blank');
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1338
+Remediation
+Pass the noopener feature string: window.open(url, '_blank', 'noopener,noreferrer'). This removes the opener reference from the child window.
+Low
+window.open() Without noopener — Reverse Tabnabbing Risk
+window.open() is called without passing rel="noopener noreferrer". The opened page gains a reference to the opener window via window.opener, allowing it to redirect the original page to a phishing URL.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+window.open(url, '_blank');
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1423
+Remediation
+Pass the noopener feature string: window.open(url, '_blank', 'noopener,noreferrer'). This removes the opener reference from the child window.
+Low
+window.open() Without noopener — Reverse Tabnabbing Risk
+window.open() is called without passing rel="noopener noreferrer". The opened page gains a reference to the opener window via window.opener, allowing it to redirect the original page to a phishing URL.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+window.open(url, '_blank');
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1535
+Remediation
+Pass the noopener feature string: window.open(url, '_blank', 'noopener,noreferrer'). This removes the opener reference from the child window.
+Low
+window.open() Without noopener — Reverse Tabnabbing Risk
+window.open() is called without passing rel="noopener noreferrer". The opened page gains a reference to the opener window via window.opener, allowing it to redirect the original page to a phishing URL.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+window.open(editUrl, '_blank');
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1608
+Remediation
+Pass the noopener feature string: window.open(url, '_blank', 'noopener,noreferrer'). This removes the opener reference from the child window.
+Low
+window.open() Without noopener — Reverse Tabnabbing Risk
+window.open() is called without passing rel="noopener noreferrer". The opened page gains a reference to the opener window via window.opener, allowing it to redirect the original page to a phishing URL.
+File Location
+ai-ultimate-website-booster/assets/js/admin.js
+Vulnerable Line
+window.open(data.edit_url, '_blank');
+Evidence
+ai-ultimate-website-booster/assets/js/admin.js:1838
+Remediation
+Pass the noopener feature string: window.open(url, '_blank', 'noopener,noreferrer'). This removes the opener reference from the child window.
+Score Breakdown
+0 × -25
+Critical
+-0
+22 × -12
+High
+-264
+10 × -5
+Medium
+-50
+5 × -2
+Low
+-10
+0 × -0
+Info
+-0
+Final Score:
+0 / 100 (Grade F)

@@ -1,0 +1,37 @@
+AI Ultimate Website Booster — CodeCanyon Promotion Copy
+
+Title:
+AI Ultimate Website Booster | AI Content, SEO Schema & Premium Popups
+
+Short description:
+A polished WordPress plugin by Swastik Infotech that boosts conversions with AI-generated content, rich schema output, premium popup templates, and health analytics.
+
+Full description:
+AI Ultimate Website Booster is a complete digital growth plugin made for WordPress professionals. It includes AI-powered content generation, secure OpenAI API integration, smart popup campaigns, SEO schema markup, site health auditing, and a flexible admin dashboard.
+
+Key features:
+- Real AI article generation via OpenAI or custom endpoint
+- Premium popup templates with exit intent, scroll, and delay triggers
+- Schema injection for single post rich results
+- Inactive plugin alerts and website performance checklist
+- Customizable popup headlines, messages, and CTA buttons
+- REST API and AJAX workflow ready for advanced setup
+
+Why buyers love it:
+- Fast setup with a professional UI and WordPress coding standards
+- Designed for CodeCanyon quality review with secure validation
+- Ideal for agencies, freelancers, and store owners who want more conversions
+- Built by Swastik Infotech with clean architecture and documentation
+
+What’s included:
+- Plugin folder with admin menu, REST services, popup system, and schema engine
+- Premium templates and popup design presets
+- Professional installation guide and changelog
+- Readme and marketing-ready documentation
+
+Screenshots included:
+- Admin dashboard overview
+- AI content generator screen
+- Popup template selection panel
+- Live popup sample on frontend
+- Settings and API configuration screen
